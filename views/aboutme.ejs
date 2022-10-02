@@ -1,0 +1,33 @@
+<%- include('partials/header') -%>
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-6">
+<div class="mt-5">
+    <h2>About Me</h2>
+    <form action="/aboutme/createAboutme" enctype="multipart/form-data" method="POST">
+      <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="name" class="form-control" id="name" name="name">
+      </div>
+      <div class="mb-3">
+        <label for="contact" class="form-label">Contact (This will show on all your posts, so other users may contact you, you may leave it blank if you like to communicate via comments of the post)
+        </label>
+        <textarea class="form-control" id="contact" name="contact"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="about" class="form-label">About Me</label>
+        <textarea class="form-control" id="about" name="about"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="imgUpload" class="form-label">Image (Optional)</label>
+        <input type="file" class="form-control" id="imageUpload" name="file">
+      </div>
+      <div class="mb-3">
+        <label for="skills" class="form-label">Skills</label>
+        <textarea class="form-control" id="skills" name="skills"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+    </form>
+  </div>
+</div></div></div>
+  <%- include('partials/footer') -%>

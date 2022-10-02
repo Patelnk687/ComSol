@@ -1,0 +1,45 @@
+<%- include('partials/header') -%>
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <ul class="row list-unstyled">
+      <% for(var i=0; i<companys.length; i++) {%>
+        <li class="col-6 justify-content-between mt-5">
+          <%= companys[i]._id %>
+   
+                  <h3><%= companys[i].hotelName %></h5>
+                  <h5><%= companys[i].phoneNumber %></h5>
+                  <h5><%= companys[i].companyEmail %></h5>
+                  <h5><%= companys[i].companyAddress %></h5>
+        </li>
+      <% } %>
+
+   
+
+<!-- gets data from db and renders in ejs -->
+
+      <table>
+        <tr>
+           <th>Hotel Name</th><th>Phone Number</th><th>Company Email</th><th>Company Address</th>
+        </tr>
+     
+        <% for(var i=0; i<companys.length; i++) {%>
+         <tr>
+           <td><%= companys[i].hotelName %></td>
+           <td><%= companys[i].phoneNumber %></td>
+           <td><%= companys[i].companyEmail %></td>
+           <td><%= companys[i].companyAddress %></td>
+         </tr>    
+        <% } %>
+     </table>
+
+
+
+
+
+
+
+
+      </ul>
+  </div>
+</div>  
+<%- include('partials/footer') -%>

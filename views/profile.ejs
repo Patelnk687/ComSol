@@ -1,0 +1,173 @@
+<%- include('partials/header') -%>
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-6">
+          <div>
+              <p><strong>User Name</strong>: <%= user.userName %></p>
+              <p><strong>Email</strong>: <%= user.email %></p>
+              
+        
+             
+             
+              <a href="/logout" class="col-4 btn btn-primary">Logout</a>
+          </div>
+
+          <div class="mt-5">
+            <h2>Post A Help Request</h2>
+            <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+              <div class="mb-3">
+                  <label for="title" class="form-label">Title</label>
+                  <input type="text" class="form-control" id="title" name="title">
+              </div>
+              <div class="mb-3">
+                <label for="caption" class="form-label">Caption</label>
+                <textarea class="form-control" id="caption" name="caption"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="imgUpload" class="form-label">Image (Optional)</label>
+                <input type="file" class="form-control" id="imageUpload" name="file">
+              </div>
+              <div class="mb-3">
+                <label for="rate" class="form-label">Offer</label>
+                <textarea class="form-control" id="rate" name="rate"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="skill" class="form-label">Skills</label>
+                <textarea class="form-control" id="skill" name="skill"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+            </form>
+          </div>
+        
+        
+         
+          <!-- <div class="mt-5">
+            <h2>Post A Help Request</h2>
+            <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+              <div class="mb-3">
+                  <label for="title" class="form-label">Title</label>
+                  <input type="text" class="form-control" id="title" name="title">
+              </div>
+              <div class="mb-3">
+                <label for="caption" class="form-label">Caption</label>
+                <textarea class="form-control" id="caption" name="caption"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="imgUpload" class="form-label">Image (Optional)</label>
+                <input type="file" class="form-control" id="imageUpload" name="file">
+              </div>
+              <div class="mb-3">
+                <label for="rate" class="form-label">Offer Rate</label>
+                <textarea class="form-control" id="rate" name="rate"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+            </form>
+          </div> -->
+
+
+          <!-- <div class="mt-5">
+            <h2>About Me</h2>
+            <form action="/post/createProfile" enctype="multipart/form-data" method="POST">
+              <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="name" class="form-control" id="name" name="name">
+              </div>
+              <div class="mb-3">
+                <label for="mycaption" class="form-label">About Me</label>
+                <textarea class="form-control" id="mycaption" name="mycaption"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="imgUpload" class="form-label">Image (Optional)</label>
+                <input type="file" class="form-control" id="imageUpload" name="file">
+              </div>
+              <div class="mb-3">
+                <label for="skills" class="form-label">Skills</label>
+                <textarea class="form-control" id="skills" name="skills"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+            </form>
+          </div> -->
+
+          <!--I added below this --> 
+        
+          <!-- <div class="mt-5">
+            <h2>Add a room</h2>
+            <form action="/room/createRoom" enctype="multipart/form-data" method="POST">
+              <div class="mb-3">
+                  <label for="roomNumber" class="form-label" name="roomNumber">Room Number</label>
+                  <input type="text" class="form-control" id="roomNumber" name="roomNumber">
+              </div>
+              <div class="mb-3">
+                <label for="roomType" class="form-label" name="roomType">Room Type</label>
+                <textarea class="form-control" id="roomType" name="roomType"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="roomRate" class="form-label" name="roomRate">Room Rate</label>
+                <textarea class="form-control" id="roomRate" name="roomRate"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="imgUpload" class="form-label">Image</label>
+                <input type="file" class="form-control" id="imageUpload" name="file">
+              </div>
+              <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+            </form>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="mt-5">
+            <h2>Add a Company</h2>
+            <form action="/company/createCompany" method="POST">
+              <div class="mb-3">
+                  <label for="hotelName" class="form-label" name="hotelName">Hotel Name</label>
+                  <input type="text" class="form-control" id="hotelName" name="hotelName">
+              </div>
+              <div class="mb-3">
+                <label for="phoneNumber" class="form-label" name="phoneNumber">Phone Number</label>
+                <textarea class="form-control" id="phoneNumber" name="phoneNumber"></textarea>
+              </div>
+              
+              <div class="mb-3">
+                <label for="companyEmail" class="form-label" name="companyEmail">Company Email</label>
+                <textarea class="form-control" id="companyEmail" name="companyEmail"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="companyAddress" class="form-label" name="companyAddress">Company Address</label>
+                <textarea class="form-control" id="companyAddress" name="companyAddress"></textarea>
+              </div> -->
+              <!-- <div class="mb-3">
+                <label for="imgUpload" class="form-label">Image</label>
+                <input type="file" class="form-control" id="imageUpload" name="file">
+              </div> -->
+              <!-- <button type="submit" class="btn btn-primary" >Submit</button>
+            </form> -->
+          <!-- </div> -->
+
+
+
+          <!--I added everything above this --> 
+      </div>
+      <div class="col-6">
+        <ul class="row list-unstyled">
+        <% for(var i=0; i<posts.length; i++) {%>
+          <li class="col-6 justify-content-between mt-5">
+            <a href="/post/<%= posts[i]._id%>">
+              <img class="img-fluid" src="<%= posts[i].image%>">
+            </a>
+          </li>
+        <% } %>
+        </ul>
+        <div class="row justify-content-center mt-5">
+          <a class="btn btn-primary" href="/feed">Return to Feed</a>
+        </div>  
+      </div>  
+    </div>
+  </div>
+</div>
+<%- include('partials/footer') -%>
