@@ -1,16 +1,37 @@
 <%- include('partials/header') -%>
-  <div class="container">
+<!-- search bar   -->
+<div class="container">
+<div class="row justify-content-center mt-5">
+    <form action="/post/search" method="post" class="input-group rounded">
+      <input type="text" class="form-control rounded" placeholder="Search by City or Zipcode" name="keyword" id="searchBar" aria-describedby="search-addon" />
+      <span class="input-group-text border-0" id="search-addon">
+        <i class="fas fa-search"></i>
+      </span>
+    </form>
+</div>
+</div>
+
+
+
+
+
+<div class="container rounded">
     <div class="row justify-content-center mt-5">
       <ul class="row list-unstyled">
+       
+       
         <% for(var i=0; i<posts.length; i++) {%>
           <li class="col-6 justify-content-between mt-5">
             <a href="/post/<%= posts[i]._id%>">
               <img class="img-fluid" src="<%= posts[i].image%>">
-              <%= posts[i].title %> ,
-      <%= posts[i].caption %>
+                <%= posts[i].title %> - 
+                 <%= posts[i].caption %> - 
+                 <%= posts[i].area %> 
             </a>
           </li>
         <% } %>
+
+
         </ul>
     </div>
   </div>  

@@ -1,5 +1,5 @@
 <%- include('partials/header') -%>
-<div class="container">
+<div class="container rounded">
   <div class="row mt-5">
       <div class="col-6">
           <div>
@@ -9,7 +9,6 @@
         
              
              
-              <a href="/logout" class="col-4 btn btn-primary">Logout</a>
           </div>
 
           <div class="mt-5">
@@ -31,9 +30,13 @@
                 <label for="rate" class="form-label">Offer</label>
                 <textarea class="form-control" id="rate" name="rate"></textarea>
               </div>
-              <div class="mb-3">
+              <!-- <div class="mb-3">
                 <label for="skill" class="form-label">Skills</label>
                 <textarea class="form-control" id="skill" name="skill"></textarea>
+              </div> -->
+              <div class="mb-3">
+                <label for="area" class="form-label">Location (City,State or Zipcode,State eg. Austin,TX)</label>
+                <textarea class="form-control" id="area" name="area"></textarea>
               </div>
               <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
             </form>
@@ -159,6 +162,9 @@
           <li class="col-6 justify-content-between mt-5">
             <a href="/post/<%= posts[i]._id%>">
               <img class="img-fluid" src="<%= posts[i].image%>">
+              <%= posts[i].title %> - 
+              <%= posts[i].caption %> 
+             
             </a>
           </li>
         <% } %>

@@ -16,6 +16,8 @@ const roomRoutes = require("./routes/rooms");
 const companyRoutes = require("./routes/companys");
 const aboutmeRoutes = require("./routes/aboutme");
 const commentRoutes= require("./routes/comments");
+const { collection } = require("./models/User");
+const { ObjectId } = require("mongodb");
 
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
@@ -52,6 +54,8 @@ app.use(
   })
 );
 
+
+
 // Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
@@ -72,3 +76,5 @@ app.use("/comment", commentRoutes);
 app.listen(process.env.PORT, () => {
   console.log("Server is running, you better catch it!");
 });
+
+

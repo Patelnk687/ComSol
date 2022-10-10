@@ -1,11 +1,14 @@
 <%- include('partials/header') -%>
-<h1 class=""><a href="/profile"><img  src="/imgs/CSlogo2.png" alt="Welcome to " width="500" height="333"></a></h1>
+<div class="container mt-5 mx-15 box">
+  <video width="500" height="300" controls>
+    <source src="/imgs/comsolvid.mp4" type="video/mp4" />
+  </video>
+</div>
 <main class="container">
-    <div class="row justify-content-around mt-5">
-        <a href="/login" class="col-3 btn btn-primary"> Login</a>
-        <a href="/signup" class="col-3 btn btn-primary"> Signup</a>
-    </div>
+  <div class="row justify-content-around mt-5">
+    <a href="/login" class="col-3 btn btn-primary"> Login</a>
+    <a href="/signup" class="col-3 btn btn-primary"> Signup</a>
+  </div>
 </main>
-    
 
 <%- include('partials/footer') -%>

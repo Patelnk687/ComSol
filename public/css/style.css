@@ -1,1 +1,11 @@
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.navbar-expand-lg{background-color: black;}
+.container.rounded{background-color: rgb(210, 151, 112);}
+
+
 body  {background-color: sandybrown;}

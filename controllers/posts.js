@@ -36,6 +36,19 @@ module.exports = {
       console.log(err);
     }
   },
+
+  searchPost : async(req,res)=>{
+    try {
+      const post = await Post.find({
+        area:{$regex:req.body.keyword,$options:"i"}
+      });
+      console.log(post);
+      res.render("feed.ejs", { posts: post,});
+     
+    } catch (err) {
+      console.log(err);
+    }
+  },
   createPost: async (req, res) => {
     try {
       // Upload image to cloudinary
@@ -49,6 +62,7 @@ module.exports = {
         cloudinaryId: result.public_id,
         rate: req.body.rate,
         skill: req.body.skill,
+        area: req.body.area,
         likes: 0,
         user: req.user.id,
         createdBy: req.user.email
@@ -60,6 +74,7 @@ module.exports = {
         caption: req.body.caption,
         rate: req.body.rate,
         skill: req.body.skill,
+        area: req.body.area,
         likes: 0,
         user: req.user.id,
       });
