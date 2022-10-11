@@ -33,7 +33,6 @@ const PostSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
-
   aboutme: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Aboutme",

@@ -10,6 +10,7 @@ module.exports = {
       const posts = await Post.find({ user: req.user.id });
       const userz = await Aboutme.findOne({user:req.user.id});
       const users = await User.find({post: req.params.id});
+      console.log(userz)
       res.render("profile.ejs", { posts: posts, user: req.user, aboutme: userz , users: users});
       
     } catch (err) {
@@ -103,15 +104,22 @@ module.exports = {
   deletePost: async (req, res) => {
     try {
       // Find post by id
+     
       let post = await Post.findById({ _id: req.params.id });
       // Delete image from cloudinary
-      await cloudinary.uploader.destroy(post.cloudinaryId);
+       await cloudinary.uploader.destroy(post.cloudinaryId);
       // Delete post from db
       await Post.remove({ _id: req.params.id });
       console.log("Deleted Post");
       res.redirect("/profile");
-    } catch (err) {
+     }
+    
+    catch (err) {
+      let post = await Post.findById({ _id: req.params.id });
+      await Post.remove({ _id: req.params.id });
+      console.log("Deleted Post");
       res.redirect("/profile");
-    }
+      }
+    
   },
 };

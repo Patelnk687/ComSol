@@ -67,6 +67,7 @@ else{
   await Aboutme.create({
     name: req.body.name,
     about: req.body.about,
+    contact: req.body.contact,
     skills: req.body.skills,
     user: req.user.id,
   });
