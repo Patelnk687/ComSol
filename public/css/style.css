@@ -4,6 +4,8 @@
     justify-content: center;  
 }
 
+.img-thumbnail{max-height: 200px;max-width: 200px;}
+
 .navbar-expand-lg{background-color: black;}
 .container.rounded{background-color: rgb(210, 151, 112);}
 
