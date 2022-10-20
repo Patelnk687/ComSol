@@ -19,4 +19,6 @@
 
 `npm start`
 
+# Preview
+
 <img src="comsol.gif" width="700" height="400" />
