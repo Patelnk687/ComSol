@@ -18,3 +18,5 @@
 # Run
 
 `npm start`
+
+<img src="comsol.gif" width="40" height="40" />
