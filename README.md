@@ -19,4 +19,4 @@
 
 `npm start`
 
-<img src="comsol.gif" width="40" height="40" />
+<img src="comsol.gif" width="400" height="400" />
